@@ -1,11 +1,10 @@
 package main
 
-import (
-	"www/src/router"
-)
+import "www/src/rooter"
 
 func main() {
-	rt := router.Init()
+	rt := rooter.Init()
 
+	// サーバー起動
 	rt.Logger.Fatal(rt.Start(":8080"))
 }
