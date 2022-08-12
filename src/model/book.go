@@ -1,7 +1,6 @@
 package model
 
 import (
-	"fmt"
 	"time"
 
 	"gorm.io/gorm"
@@ -20,8 +19,6 @@ type Books []Book
 
 // 一覧取得
 func (b *Books) GetBooks() *gorm.DB {
-	// books := []Book{}
-	fmt.Println(DB.Find(&b))
 	return DB.Find(&b)
 }
 
